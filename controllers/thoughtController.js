@@ -1,4 +1,4 @@
-const { Thought, Thought } = require('../models');
+const { Thought, User } = require('../models');
 // thoughts
 // thought
 module.exports = {
@@ -121,7 +121,8 @@ module.exports = {
       );
 
       if (!thought) {
-        return res.status(404).json(err);
+        return res.status(404)
+          .json(err);
       }
 
       res.json(thought);
